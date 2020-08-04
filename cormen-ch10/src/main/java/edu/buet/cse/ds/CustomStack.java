@@ -1,5 +1,12 @@
 package edu.buet.cse.ds;
 
+/**
+ * An interface definition for stack
+ * 
+ * @author shamim
+ *
+ * @param <T>
+ */
 public interface CustomStack<T> {
   /**
    * Add an item to stack

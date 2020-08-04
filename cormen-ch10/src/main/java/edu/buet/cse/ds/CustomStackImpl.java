@@ -1,5 +1,12 @@
 package edu.buet.cse.ds;
 
+/**
+ * An implementation of stack interface
+ * 
+ * @author shamim
+ *
+ * @param <T>
+ */
 public class CustomStackImpl<T> implements CustomStack<T> {
   private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
