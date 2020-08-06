@@ -4,7 +4,8 @@
   <groupId>edu.buet.cse</groupId>
   <artifactId>cormen-ch10</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>Chapter 10 - Elementary Data Structures</name>
+  <name>cormen-ch10</name>
+  <description>Chapter 10 - Elementary Data Structures</description>
 
   <dependencies>
     <dependency>
