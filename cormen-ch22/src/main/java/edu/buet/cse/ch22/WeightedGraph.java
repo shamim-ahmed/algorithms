@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * An adjacency list representation of a Graph
+ * An adjacency list representation of a weighted Graph
  * 
  * @author shamim
  *
  */
-public class Graph {
+public class WeightedGraph {
   private List<Edge>[] adjacencyArray;
 
   @SuppressWarnings("unchecked")
-  public Graph(int numberOfNodes) {
+  public WeightedGraph(int numberOfNodes) {
     if (numberOfNodes <= 0) {
       throw new IllegalArgumentException("number of nodes must be a positive integer");
     }
