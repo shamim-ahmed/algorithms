@@ -50,6 +50,7 @@ public class BreadthFirstSearch {
     colorArray[source] = Color.GRAY;
 
     Queue<Integer> vertexQueue = new LinkedList<>();
+    vertexQueue.offer(source);
 
     while (!vertexQueue.isEmpty()) {
       Integer x = vertexQueue.poll();
@@ -65,6 +66,24 @@ public class BreadthFirstSearch {
       }
 
       colorArray[x] = Color.BLACK;
+    }    
+  }
+
+  public String findPath(int s, int v) {
+    if (s == v) {
+      return Integer.toString(s);
     }
+
+    if (parentArray[v] == null) {
+      return null;
+    }
+
+    String path = findPath(s, parentArray[v]);
+
+    if (path == null) {
+      return null;
+    }
+
+    return path + " " + v;
   }
 }

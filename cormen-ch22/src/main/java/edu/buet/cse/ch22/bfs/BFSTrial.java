@@ -15,7 +15,7 @@ public class BFSTrial {
         String line = scanner.nextLine();
         String[] values = line.split("\\s+");
         int source = Integer.parseInt(values[0]);
-        
+
         for (int k = 1; k < values.length; k++) {
           int destination = Integer.parseInt(values[k]);
           graph.addEdge(source, destination);
@@ -24,6 +24,7 @@ public class BFSTrial {
 
       BreadthFirstSearch bfs = new BreadthFirstSearch(graph);
       bfs.runBFS(1);
+      System.out.println(bfs.findPath(1, 3));
     }
   }
 }

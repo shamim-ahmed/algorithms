@@ -49,7 +49,7 @@ public class Graph {
     StringBuilder builder = new StringBuilder();
 
     for (int i = 0; i < adjacencyArray.length; i++) {
-      builder.append(i).append(" -> ").append(adjacencyArray[i]);
+      builder.append(i).append(" -> ").append(adjacencyArray[i]).append("\n");
     }
 
     return builder.toString();
