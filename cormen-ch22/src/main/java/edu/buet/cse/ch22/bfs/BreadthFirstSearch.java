@@ -20,6 +20,11 @@ public class BreadthFirstSearch {
 
   public BreadthFirstSearch(Graph graph) {
     this.graph = graph;
+
+    final int n = graph.getNumberOfVertices();
+    parentArray = new Integer[n];
+    distanceArray = new Integer[n];
+    colorArray = new Color[n];
   }
 
   public void runBFS(int source) {
@@ -30,10 +35,6 @@ public class BreadthFirstSearch {
     }
 
     // initialize parent, distance and color for each vertex
-    parentArray = new Integer[n];
-    distanceArray = new Integer[n];
-    colorArray = new Color[n];
-
     for (int i = 0; i < n; i++) {
       if (i == source) {
         continue;
