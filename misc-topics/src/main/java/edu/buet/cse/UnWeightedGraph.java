@@ -1,4 +1,4 @@
-package edu.buet.cse.ch22;
+package edu.buet.cse;
 
 import java.util.ArrayList;
 import java.util.List;
