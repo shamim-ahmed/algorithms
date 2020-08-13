@@ -2,24 +2,22 @@ package edu.buet.cse.ch22.bfs;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Queue;
 
+import edu.buet.cse.ch22.Color;
 import edu.buet.cse.ch22.Graph;
 
 public class BreadthFirstSearch {
-  enum Color {
-    WHITE, GRAY, BLACK
-  }
-
   private static final Integer INFINITY = Integer.MAX_VALUE;
 
-  private Graph graph;
-  private Integer[] parentArray;
-  private Integer[] distanceArray;
-  private Color[] colorArray;
+  private final Graph graph;
+  private final Integer[] parentArray;
+  private final Integer[] distanceArray;
+  private final Color[] colorArray;
 
   public BreadthFirstSearch(Graph graph) {
-    this.graph = graph;
+    this.graph = Objects.requireNonNull(graph);
 
     final int n = graph.getNumberOfVertices();
     parentArray = new Integer[n];
