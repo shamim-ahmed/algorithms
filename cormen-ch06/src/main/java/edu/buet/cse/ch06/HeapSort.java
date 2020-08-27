@@ -11,36 +11,49 @@ public class HeapSort {
   }
 
   public void sort() {
-    heapSize = 0;
+    heapSize = values.length;
+    buildMaxHeap();
+    
+    for (int i = 0; i < values.length - 1; i++) {
+      swap(0, heapSize - 1);
+      heapSize--;
+      maxHeapify(0);
+    }
   }
 
-  private void maxHeapify(int i) {
-    int left = getLeft(i);
-    int right = getRight(i);
-    int max = i;
+  private void maxHeapify(final int idx) {
+    int i = idx;
+    boolean flag = true;
 
-    if (left <= heapSize && values[left] > values[max]) {
-      max = left;
-    }
+    while (flag) {
+      int left = getLeft(i);
+      int right = getRight(i);
+      int max = i;
 
-    if (right <= heapSize && values[right] > values[max]) {
-      max = right;
-    }
+      if (left <= heapSize - 1 && values[left] > values[max]) {
+        max = left;
+      }
 
-    if (max != i) {
-      swap(i, max);
-      maxHeapify(max);
+      if (right <= heapSize - 1 && values[right] > values[max]) {
+        max = right;
+      }
+
+      if (max != i) {
+        swap(i, max);
+        i = max;
+      } else {
+        flag = false;
+      }
     }
   }
 
   private void buildMaxHeap() {
-    heapSize = values.length;
-    
-    for (int i = heapSize / 2; i >= 1; i--) {
+    for (int i = heapSize / 2; i >= 0; i--) {
       maxHeapify(i);
     }
   }
 
+  @SuppressWarnings("unused")
   private int getParent(int i) {
     return (i - 1) / 2;
   }
