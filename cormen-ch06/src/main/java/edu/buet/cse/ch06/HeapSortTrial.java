@@ -15,7 +15,9 @@ public class HeapSortTrial {
     System.out.println(Arrays.toString(values));
   }
 
-  // Fisher-Yates shuffle
+  /*
+   * Fisher-Yates shuffle. See here: https://stackoverflow.com/a/1520212
+   */
   private static void shuffle(int[] values) {
     Random randomGenerator = new Random();
 
