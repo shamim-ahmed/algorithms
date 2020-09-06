@@ -1,7 +1,18 @@
 package edu.buet.cse.ch07;
 
+/**
+ * An implementation of Quicksort algorithm
+ * 
+ * @author shamim
+ *
+ */
 public class QuickSortAlgorithm {
 
+  /**
+   * Sort the given values in place
+   * 
+   * @param values an array of int
+   */
   public void sort(int[] values) {
     quickSort(values, 0, values.length - 1);
   }

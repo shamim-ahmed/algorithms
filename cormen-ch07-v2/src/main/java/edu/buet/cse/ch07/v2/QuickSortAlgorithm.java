@@ -2,9 +2,20 @@ package edu.buet.cse.ch07.v2;
 
 import java.util.Random;
 
+/**
+ * An implementation of Quicksort algorithm with randomization
+ * 
+ * @author shamim
+ *
+ */
 public class QuickSortAlgorithm {
   private final Random randomGenerator = new Random();
 
+  /**
+   * sort the given values in place
+   * 
+   * @param values an array of int
+   */
   public void sort(int[] values) {
     quickSort(values, 0, values.length - 1);
   }
